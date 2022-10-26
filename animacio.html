@@ -1,0 +1,30 @@
+<html>
+    <body>
+        <h1>Animáció</h1>
+        <svg width="525" height="200">
+            <circle id="x" cx="50" cy="30" r="30" stroke="purple" stroke-width="1" fill="pink" />
+
+        </svg>
+    </body>
+    <style>
+        svg {
+            border: solid 2px blueviolet
+        }
+    </style>
+    <script>
+        x = 50
+        y = 50
+        xí = 1
+        yí = 1
+        setInterval( () => {
+            document.getElementById("x").setAttribute("cx", x)
+            document.getElementById("x").setAttribute("cx", y)
+            x += xí
+            y+= yí
+            if (x>900 || x < 50) xí = -xí
+            if (x>500 || y < 50) yí = -yí
+        }, 1)
+    </script>
+     <body bgcolor="lightblue"></body>
+     <br>  <a href="index.html">Ugrás vissza</a>
+</html>
