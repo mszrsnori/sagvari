@@ -1,0 +1,7 @@
+<input type="number" onchange="a = f(this.value)">
+<button onclick="alert(a)">Írd ki</button>
+<script>
+    function f(n) {
+        return n == 1 ? 1 : n * f(n - 1)
+    }
+</script>

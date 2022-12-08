@@ -31,5 +31,13 @@
         font-size: 30xp;
     }
 </style>
-<br>  <a href="index.html" target="_blank"><button>Ugrás vissza</button></a>
-        
+
+<input type="number" onchange="a = f(this.value)">
+<button onclick="alert(a)">Írd ki</button>
+<script>
+    function f(n) {
+        return n == 1 ? 1 : n * f(n - 1)
+    }
+</script>
+<br>
+<hr>  <a href="index.html" target="_blank"><button>Ugrás vissza</button></a>        
