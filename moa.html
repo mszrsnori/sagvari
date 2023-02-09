@@ -1,3 +1,6 @@
+<h1>
+    Összeadó program
+</h1>
 <input  type="number"
         id="i1"
         min="0"
@@ -41,3 +44,30 @@
 </script>
 <br>
 <hr>  <a href="index.html" target="_blank"><button>Ugrás vissza</button></a>        
+
+<h1>
+    Számrendszerek közti átváltó program
+</h1>
+<select onchange="szra=this.value">
+    <option value="">10-es</option>
+    <option value="0x">16-os (hexadecimális)</option>
+    <option value="0b">2-es (bináris)</option>
+    <option value="0o">8-as (oktális)</option>
+</select><br>
+<input min="2" max="32" type="number" onchange="csz=Number(this.value)" placeholder="cél számrendszer"><br>
+<input type="text" onchange="szam=Number(szra+this.value)" placeholder="átváltandó szám"><br>
+<button onclick="f()">átvált</button>
+<div id="x"></div>
+<script>
+    szra=""
+    function f() {
+        document.getElementById("x").innerHTML = 
+            szam.toString(csz)
+    }
+</script>
+<style>
+    body {
+        text-align: center;
+        background-color: bisque;
+    }
+</style>
